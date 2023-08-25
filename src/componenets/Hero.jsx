@@ -11,9 +11,9 @@ const Section = styled.div`
   justify-content: space-between;
 `;
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 1366px;
   display: flex;
   justify-content: space-between;
 `;
@@ -55,6 +55,7 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 3;
+  position: relative;
 `;
 const Img = styled.img`
   width: 800px;
@@ -66,6 +67,12 @@ const Img = styled.img`
   left: 0;
   right: 0;
   margin: auto;
+  animation: animate 2s infinite ease alternate;
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
 `;
 
 export const Hero = () => {
